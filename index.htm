@@ -1,0 +1,792 @@
+<html>
+   <head>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Shadows+Into Light&amp;display=swap" media="all" id="shr-font-shadows-into light">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+      <link href="./templates/template2/t2-style.css" rel="stylesheet">
+      <link href="./templates/common/css/star-rating.css" rel="stylesheet">
+      <link href="./styles/lib/fancy/v3/jquery.fancybox.min.css"
+         rel="stylesheet" type="text/css" media="screen" />
+      <style>
+         .file {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 6px;
+            resize: vertical;
+            outline: none;
+            font-size: 14px;
+            font-family: 'Uniform', sans-serif;
+         }
+
+         :root {
+            --theme-color: #c12366 !important;
+            --theme-color-light: #f0f5f4;
+         }
+
+         .blink {
+            width: 200px;
+            height: 5px;
+            background-color: #c12366 !important;
+            padding: 10px;
+            text-align: center;
+            line-height: 5px;
+         }
+
+         .span-blink {
+            font-size: 13px;
+            font-family: 'Uniform', sans-serif;
+            font-weight: bold;
+            font-size: italic;
+            color: white;
+            animation: blink 5s linear infinite;
+         }
+
+         @keyframes blink {
+            0% {
+               opacity: 0;
+            }
+            50% {
+               opacity: 1;
+            }
+            100% {
+               opacity: 1;
+            }
+         }
+
+         .profile-pic-img {
+            width: 120px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            margin-bottom: 15px;
+         }
+
+         .grid-container {
+            display: grid;
+            grid-template-columns: auto auto;
+            /* background-color: #2196F3; */
+            padding: 10px;
+         }
+
+         .grid-item {
+            background-color: #424242;
+            border: 1px solid #424242;
+            color: white;
+            padding: 2px;
+            font-size: 10px;
+            text-align: center;
+            margin: 4px;
+            border-radius: 10px;
+            font-weight: 400;
+            background-color: #a83256;
+            border: 1px solid #a83256;
+            padding: 5px;
+            border-radius: 0px;
+            min-width: 70px;
+            display: inline-block;
+            font-size: 12px;
+            /* box-shadow: 0 1px 4px rgb(0 0 0 / 20%), 0 0 40px rgb(255 251 251 / 10%) inset; */
+            text-align: center;
+            background-color: #fff;
+            color: #a83256;
+            border: 1px solid #a83256;
+            margin-bottom: 4px;
+         }
+
+         .grid-item a {
+            color: white;
+         }
+
+         .grid-item-title {
+            border: 1px solid #dadce0;
+            border-radius: 30px;
+            margin: 0 8px 8px 0;
+            /* padding: 8px 12px; */
+            overflow: hidden;
+            text-align: center;
+            text-overflow: ellipsis;
+            font-size: 12px;
+            white-space: nowrap;
+            cursor: pointer;
+            color: #1a0dab;
+         }
+
+         .active {
+            color: #fff;
+            background-color: #424242;
+         }
+         
+         #tbleOne {
+            border: 2px solid red;
+            box-shadow: azure;
+         }
+         #tbleTwo {
+            border: 2px solid blue;
+            box-shadow: azure;
+         }
+         #tbleThree {
+            border: 2px solid green;
+            box-shadow: azure;
+         }
+         #tbleFour {
+            border: 2px solid orange;
+            box-shadow: azure;
+         }
+         #tbleFive {
+            border: 2px solid brown;
+            box-shadow: azure;
+         }
+         #tbleSix {
+            border: 2px solid hotpink;
+            box-shadow: azure;
+         }
+      </style>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0 minimal-ui">
+      <meta property="og:image" itemprop="image" content="https://aaminfo.s3.us-east-2.amazonaws.com/digital-card/DP/174a9ed62d0.PNG"/>
+      <meta property="og:type" content="website" />
+      <meta property="og:description" content="Bodhi Bonsai Nursery Garden Buy Bonsai plants sale in Tamil Nadu" />
+      
+      <meta name="keywords" content="Buy All Plants in Trichy Tamil Nadu Bodhi Bonsai Nursery Garden, Bonsai plants, Bonsai Tree, Cactus Plants, Orchid Plants, Ficus Plants, Jade Plants, Gift Plants, Fruit Trees, Flower Plants, Flowering Plants, Adenium plants, Succulent Plants,  Herbal Plants, Indoor Plants, Outdoor Plants, Bougainvillea plants, Lucky Bamboo, medicinal plants, Air Purifying plants and attractive ornamental plants for sale online at Best Price. Excellent to be grown in your homes or offices, Bonsai Plants are interpreted as the best plants for indoor gardeners, buy bonsai plants for sale trichy, buy bonsai plants for sale tamil nadu, buy bonsai tree for sale india, buy indoor plants for sale trichy, buy outdoor plants for sale trichy, buy gift plants for sale trichy, buy ficus plants for sale trichy, buy cactus plants for sale trichy, buy Jade Plants for sale trichy, buy orchid plants for sale trichy, buy flower plants for sale trichy, buy medicinal plants for sale trichy, buy short variety fruit trees for sale trichy, buy health benefits of house plants for sale trichy, buy lucky bamboo plants for sale trichy, how to make a bonsai tree youtube trichy tamil nadu, buy attractive ornamental plants for sale trichy">
+
+      <meta name="description" content="Buy All Plants in Trichy Tamil Nadu Bodhi Bonsai Nursery Garden, Bonsai plants, Bonsai Tree, Cactus Plants, Orchid Plants, Ficus Plants, Jade Plants, Gift Plants, Fruit Trees, Flower Plants, Flowering Plants, Adenium plants, Succulent Plants,  Herbal Plants, Indoor Plants, Outdoor Plants, Bougainvillea plants, Lucky Bamboo, medicinal plants, Air Purifying plants and attractive ornamental plants for sale online at Best Price. Excellent to be grown in your homes or offices, Bonsai Plants are interpreted as the best plants for indoor gardeners.">
+
+      <title>Bodhi Bonsai Nursery Garden Buy Bonsai plants sale in Trichy</title>
+      
+      <link rel="manifest" id="manifest-placeholder">
+      <script>
+         var contextPath = "";
+         var countryCode = "91";
+         var agentID = 26;
+               var dynamicManifest = {
+                   "name": "Bodhi Bonsai Nursery Garden and Aquarium",
+                   "short_name": "Bodhi Bonsai Nursery Garden and Aquarium",
+                   "description": "Bodhi Bonsai Nursery Garden and Aquarium",
+                   "start_url": "https://mycard.aamdealgroup.com/Bodhi Bonsai Nursery and Aquarium",
+                   "background_color": "#000000",
+                   "theme_color": "#0f4a73",
+                   "icons": [{
+                       "src": "https://aaminfo.s3.us-east-2.amazonaws.com/digital-card/DP/174a9ed62d0.PNG",
+                       "sizes": "256x256",
+                       "type": "image/png"
+                   }],
+                   "display": "standalone"
+               }
+             const stringManifest = JSON.stringify(dynamicManifest);
+             const blob = new Blob([stringManifest], {type: 'application/json'});
+             const manifestURL = URL.createObjectURL(blob);
+             document.querySelector('#manifest-placeholder').setAttribute('href', manifestURL);
+           
+      </script>
+   </head>
+   <body class="">
+      <div class="page-wrapper" id="home-section">
+         <div class="upper">
+            <!--div class="views-label"><i class="fas fa-eye"></i> Views: <b>381</b></div-->
+            <!-- User Profile Pic -->
+            <img src="https://aaminfo.s3.us-east-2.amazonaws.com/digital-card/DP/174a9ed62d0.PNG" class="profile-pic-img" style="height:150px; width:250px;">
+            <!-- User Company Name -->
+            <div style="">
+               <a style="font-weight:bold;text-decoration:underline;color: blue; font-size: 12px;" href="https://www.thehindu.com/news/cities/Tiruchirapalli/bonsai-a-craft-for-the-soul/article33156010.ece" target="_blank">
+                  "THE HINDU" ARTICLE ABOUT BODHI BONSAI NURSERY GARDEN
+            </div>
+            <div style="width: 40%;background-color: #F17D3A;height:2px;"></div>
+            <!-- User First Name and Last Name -->
+            <div class="name"><a class="footer-menu-link" href="#video-section"><div class="blink"><span class="span-blink">Click here to see videos</span></div></a></div>
+            <div class="contact-buttons">
+               <a class="contact-button" href="tel:9740905010">
+               <i class="fas fa-phone fa-flip-horizontal"></i>
+               Call
+               </a>
+               <a class="contact-button" target="_blank" href="https://wa.me/917397089300?text=Got reference from your Digital vCard. Want to know more about your products and services.">
+               <i class="fab fa-whatsapp"></i>
+               Whatsapp
+               </a>
+               <a class="contact-button" target="_blank" href="https://goo.gl/maps/SKJdw8YcXTTXT2yP9">
+               <i class="fas fa-map-marker-alt fa-flip-horizontal"></i>
+               Direction
+               </a>
+               <a class="contact-button" target="_blank" href="mailto:bodhinursery@gmail.com">
+               <i class="fas fa-envelope fa-flip-horizontal"></i>
+               Mail
+               </a>
+            </div>
+         </div>
+         <svg viewBox="0 0 400 25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+               <pattern id="Wave" x="0" y="0" width="100" height="25" patternUnits="userSpaceOnUse">
+                  <path d="M0 25 0 6C20 9 38 11 55 7 72 4 87 4 100 6l0 19z" id="path4" fill="#c12366"></path>
+               </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#Wave)"></rect>
+         </svg>
+         <div class="lower">
+            <table class="contact-action-table">
+               <tbody>
+                  <tr>
+                     <td>
+                        <a target="_blank" href="https://goo.gl/maps/SKJdw8YcXTTXT2yP9">
+                        <i class="fas fa-map-marker-alt contact-action-container-icon"></i>
+                        </a>
+                     </td>
+                     <td>
+                        <a target="_blank" href="https://goo.gl/maps/SKJdw8YcXTTXT2yP9" class="contact-action-container-text">
+                        DhanarathnamNagar,<br>Old paal pannai,Near Pushpa Mahal,            Trichy - 620008.
+                        </a>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <a href="mailto:bodhinursery@gmail.com">
+                        <i class="fas fa-envelope contact-action-container-icon"></i>
+                        </a>
+                     </td>
+                     <td>
+                        <a href="mailto:bodhinursery@gmail.com" class="contact-action-container-text">
+                        bodhinursery@gmail.com
+                        </a>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <a target="_blank" href="https://www.bodhinursery.com">
+                        <i class="fas fa-globe contact-action-container-icon"></i>
+                        </a>
+                     </td>
+                     <td>
+                        <a target="_blank" href="https://www.bodhinursery.com" class="contact-action-container-text">
+                        www.bodhinursery.com
+                        </a>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <a target="_blank" href="tel:7397089300"> 
+                        <i class="fas fa-phone fa-flip-horizontal contact-action-container-icon"></i>
+                        </a>
+                     </td>
+                     <td>
+                        <a target="_blank" href="tel:7397089300" class="contact-action-container-text" style="margin-bottom: 5px">
+                        7397089300 ( Primary )
+                        </a> 
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <a target="_blank" href="tel:9740905010">
+                        <i class="fas fa-phone fa-flip-horizontal contact-action-container-icon"></i>
+                        </a> 
+                     </td>
+                     <td>
+                        <a target="_blank" href="tel:9740905010" class="contact-action-container-text">
+                        9740905010 ( Secondary )
+                        </a> 
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+            <div class="p-30"></div>
+            <div class="whatsapp-input">
+               <div class="input-wrapper">
+                  <label>+91</label>
+                  <input id="whatsapp-input" class="input" placeholder="Enter mobile number" maxlength="12" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+               </div>
+               <a class="whatsapp-button" target="_blank" href="javascript:;" onclick="handleWhatsappShare(this, '91')">
+               <i class="fab fa-whatsapp"></i>Share on Whatsapp
+               </a>
+            </div>
+            <div class="p-20"></div>
+            <div class="shadow-buttons">
+               <a class="shadow-button" href="https://aaminfo.s3.us-east-2.amazonaws.com/digital-card/VCF/26.VCF" download=""><i class="fas fa-download shadow-button-icon"></i>Add to Phone Book</a>
+               <a class="shadow-button" onclick="openShareModal(this, 'Bodhi Bonsai Nursery and Aquarium')"><i class="fas fa-share-alt shadow-button-icon"></i>Share</a>
+               <a class="shadow-button save-card-button" style="display: none;"><i class="fas fa-cloud-download-alt shadow-button-icon"></i>Save Card</a>
+            </div>
+            <div>
+               <div class="p-30"></div>
+               <ul class="inprofile share-buttons">
+                  <!--  <li class="share-button">
+                     <a target="_blank" ><i class="share-button-pinterest fab fa-pinterest-p"></i></a>
+                     </li> -->
+               </ul>
+               <div class="p-20"></div>
+            </div>
+         </div>
+      </div>
+      <div class="section-container" id="gallery-section">
+         <div class="section-separator">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+         </div>
+         <h2 class="section-header">Plant Types</h2>
+         <div class="grid-container">
+            <a class="grid-item grid-item-title active" name="one" id="tabOne" href="javascript:;" onclick="showProducts(this);">
+            Bonsai | Cactus
+            </a>				
+            <a class="grid-item grid-item-title" name="two" id="tabTwo" href="javascript:;" onclick="showProducts(this);">
+            Flower | Herbal		
+            </a>	
+            <a class="grid-item grid-item-title" name="three" id="tabThree" href="javascript:;" onclick="showProducts(this);">
+            Vastu | Indoor		
+            </a>
+            <a class="grid-item grid-item-title" name="four" id="tabFour" href="javascript:;" onclick="showProducts(this);">
+            Purifying | Fruit Tree		
+            </a>
+            <a class="grid-item grid-item-title" name="five" id="tabFive" href="javascript:;" onclick="showProducts(this);">
+            Season | Outdoor		
+            </a>
+            <a class="grid-item grid-item-title" name="six" id="tabSix" href="javascript:;" onclick="showProducts(this);">
+            Home | Office		
+            </a>	
+         </div>
+         <hr>
+         <div class="p-10"></div>
+         <div class="grid-container" id="tbleOne"> 
+            <a class="grid-item" href="./products/Buy-Bonsai-Plants.html" href="javascript:;">
+               Bonsai Plants
+                 </a> <a class="grid-item" href="./products/Buy-Cactus-Plants.html" href="javascript:;">
+               Cactus Plants
+               </a> <a class="grid-item" href="./products/Buy-Jade-Plants.html" href="javascript:;">
+               Jade Plants
+                </a> <a class="grid-item" href="./products/Buy-Bodhi-Tree.html" href="javascript:;">
+               Bodhi Tree
+                 </a> <a class="grid-item" href="./products/Buy-Succulents-Plants.html" href="javascript:;">
+               Succulents Plants
+                 </a> <a class="grid-item" href="./products/Buy-Ficus-Plants.html" href="javascript:;">
+               Ficus Plants
+               </a> <a class="grid-item" href="./products/Buy-Bougainvillea-Plants.html" href="javascript:;">
+               Bougainvillea Plants
+                 </a> <a class="grid-item" href="./products/Buy-Gift-Plants.html" href="javascript:;">
+               Gift Plants
+               </a> <a class="grid-item" href="./products/Buy-Adenium-Plants.html" href="javascript:;">
+               Adenium Plants
+                 </a> <a class="grid-item" href="./products/Buy-Banyan-Tree.html" href="javascript:;">
+               Banyan Tree
+               </a> <a class="grid-item" href="./products/Buy-Fruit-Tree.html" href="javascript:;">
+               Fruit Tree
+               </a> <a class="grid-item" href="./products/Buy-Bonsai-Tree.html" href="javascript:;">
+               Bonsai Tree
+                 </a> </div>
+		<div class="grid-container" id="tbleTwo" style="display: none;"> <a class="grid-item" href="./products/Buy-Rose-Plants.html" href="javascript:;">
+               Rose Plants
+                 </a> <a class="grid-item" href="./products/Buy-Orchid-Plants.html" href="javascript:;">
+               Orchid Plants
+               </a> <a class="grid-item" href="./products/Buy-Herb-Plants.html" href="javascript:;">
+               Herb Plants
+                </a> <a class="grid-item" href="./products/Plants-for-Sale.html" href="javascript:;">
+               Plants for Sale
+                 </a> <a class="grid-item" href="./products/Buy-Flowering-Plants.html" href="javascript:;">
+                Flowering Plants
+                 </a> <a class="grid-item" href="./products/Buy-Medicinal-Plants.html" href="javascript:;">
+               Medicinal Plants
+               </a> <a class="grid-item" href="./products/Buy-Flowering-Trees.html" href="javascript:;">
+                 Flowering Trees
+                 </a> <a class="grid-item" href="./products/Buy-Flowering-Creepers.html" href="javascript:;">
+               Flowering Creepers
+               </a> <a class="grid-item" href="./products/Buy-Hibiscus-Plants.html" href="javascript:;">
+               Hibiscus Plants
+                 </a> <a class="grid-item" href="./products/Buy-Lantana-Plants.html" href="javascript:;">
+               Lantana Plants
+               </a> <a class="grid-item" href="./products/Buy-Jasmine-Plants.html" href="javascript:;">
+               Jasmine Plants
+               </a> <a class="grid-item" href="./products/Buy-Ixora-Plants.html" href="javascript:;">
+               Ixora Plants
+                 </a> </div>
+		<div class="grid-container" id="tbleThree" style="display: none;"> <a class="grid-item" href="./products/Buy-Lucky-Bamboos-plants.html" href="javascript:;">
+                  Lucky Bamboos
+                  </a> <a class="grid-item" href="./products/Buy-Croton-Plants.html" href="javascript:;">
+                  Croton Plants
+                  </a> <a class="grid-item" href="./products/Buy-Anthurium-Plants.html" href="javascript:;">
+                  Anthurium Plants
+                  </a> <a class="grid-item" href="./products/Buy-Vastu-Plants.html" href="javascript:;">
+                  Vastu Plants
+                  </a> <a class="grid-item" href="./products/Buy-Indoor-Plants.html" href="javascript:;">
+                  Indoor Plants
+                  </a> <a class="grid-item" href="./products/Buy-Hanging-Plants.html" href="javascript:;">
+                  Hanging Plants
+                  </a> <a class="grid-item" href="./products/Buy-Philodendron-Plants.html" href="javascript:;">
+                  Philodendron Plants
+                  </a> <a class="grid-item" href="./products/Buy-Plants.html" href="javascript:;">
+                  Plants
+                  </a> <a class="grid-item" href="./products/Buy-Dracaena-Plants.html" href="javascript:;">
+                  Dracaena Plants
+                  </a> <a class="grid-item" href="./products/Buy-Money-Plants.html" href="javascript:;">
+                  Money Plants
+                  </a> <a class="grid-item" href="./products/Buy-Low-Maintenance-Plants.html" href="javascript:;">
+                  Low Maintenance Plants
+                  </a> <a class="grid-item" href="./products/Buy-Lucky-Plants.html" href="javascript:;">
+                  Lucky Plants
+                  </a> </div>
+		<div class="grid-container" id="tbleFour" style="display: none;"> <a class="grid-item" href="./products/Buy-Fruit-Plants.html" href="javascript:;">
+                  Fruit Plants
+                  </a> <a class="grid-item" href="./products/Buy-Air-Purifying-Plants.html" href="javascript:;">
+                  Air Purifying Plants
+                  </a> <a class="grid-item" href="./products/Buy-Fruit-Plants-In-Pot.html" href="javascript:;">
+                  Fruit Plants In Pot
+                  </a> <a class="grid-item" href="./products/Buy-Plants.html" href="javascript:;">
+                  Plants
+                  </a> <a class="grid-item" href="./products/Buy-Snake-Plants.html" href="javascript:;">
+                  Snake Plants
+                  </a> <a class="grid-item" href="./products/Buy-Absorbing-Co2-Night-Plant.html" href="javascript:;">
+                  Absorbing Co2
+                  </a> <a class="grid-item" href="./products/Buy-Kokedama-Plants.html" href="javascript:;">
+                  Kokedama Plants
+                  </a> <a class="grid-item" href="./products/Buy-Plumeria-Champa-Plant.html" href="javascript:;">
+                  Plumeria Champa
+                  </a> <a class="grid-item" href="./products/Buy-Dieffenbachia-Plants.html" href="javascript:;">
+                  Dieffenbachia
+                  </a> <a class="grid-item" href="./products/Buy-Avenue-Trees.html" href="javascript:;">
+                  Avenue Trees
+                  </a> <a class="grid-item" href="./products/Buy-Aralia-Plants.html" href="javascript:;">
+                  Aralia Plants
+                  </a> <a class="grid-item" href="./products/Buy-Palms-and-Cycads.html" href="javascript:;">
+                  Palms and Cycads
+                  </a> </div>
+		<div class="grid-container" id="tbleFive" style="display: none;"> <a class="grid-item" href="./products/Buy-Winter-Plants.html" href="javascript:;">
+               Winter Plants
+                 </a> <a class="grid-item" href="./products/Buy-Summer-Plants.html" href="javascript:;">
+               Summer Plants
+               </a> <a class="grid-item" href="./products/Buy-Monsoon-Plants.html" href="javascript:;">
+                 Monsoon Plants
+                </a> <a class="grid-item" href="./products/Buy-Ferns-Plants.html" href="javascript:;">
+               Ferns Plants
+                 </a> <a class="grid-item" href="./products/Buy-Aromatic-Fragrant-Plants.html" href="javascript:;">
+                Aromatic Fragrant
+                 </a> <a class="grid-item" href="./products/Buy-Duranta-Plants.html" href="javascript:;">
+               Duranta Plants
+               </a> <a class="grid-item" href="./products/Buy-Syngonium-Plants.html" href="javascript:;">
+                 Syngonium Plants
+                 </a> <a class="grid-item" href="./products/Buy-Aglaonema-Plants.html" href="javascript:;">
+               Aglaonema Plants
+               </a> <a class="grid-item" href="./products/Buy-Fig-Plants.html" href="javascript:;">
+               Fig Plants
+                 </a> <a class="grid-item" href="./products/Buy-Rhoeo-Plants.html" href="javascript:;">
+               Rhoeo Plants
+               </a> <a class="grid-item" href="./products/Buy-Trees-grown-In-Pots.html" href="javascript:;">
+               Trees grown In Pots
+               </a> <a class="grid-item" href="./products/Buy-Flowering-Trees.html" href="javascript:;">
+               Flowering Trees
+                 </a> </div>
+		<div class="grid-container" id="tbleSix" style="display: none;"> <a class="grid-item" href="./products/Buy-Plants-Terrace-Balcony.html" href="javascript:;">
+               Plants for Terrace Balcony
+                 </a> <a class="grid-item" href="./products/Buy-Plants-For-Office-Desk.html" href="javascript:;">
+               Plants For Office Desk
+               </a> <a class="grid-item" href="./products/Buy-Plants-For-AC-Rooms.html" href="javascript:;">
+               Plants for AC Rooms
+                </a> <a class="grid-item" href="./products/Buy-Plants-For-Bathroom.html" href="javascript:;">
+               Plants For Bathroom
+                 </a> <a class="grid-item" href="./products/Buy-Plants-for-Kitchen.html" href="javascript:;">
+               Plants for Kitchen
+                 </a> <a class="grid-item" href="./products/Buy-Plants-For-Bedroom.html" href="javascript:;">
+               Plants For Bedroom
+               </a> <a class="grid-item" href="./products/Buy-Plants-For-Living-Room.html" href="javascript:;">
+                 Plants For Living Room
+                 </a> <a class="grid-item" href="./products/Buy-Bougainvillea-Plants.html" href="javascript:;">
+               Bougainvillea Plants
+               </a> <a class="grid-item" href="./products/Buy-Ficus-Plants.html" href="javascript:;">
+               Ficus Plants
+                 </a> <a class="grid-item" href="./products/Buy-Gift-Plants.html" href="javascript:;">
+               Gift Plants
+               </a> <a class="grid-item" href="./products/Buy-Anthurium-Plants.html" href="javascript:;">
+               Anthurium Plants
+               </a> <a class="grid-item" href="./products/Plants-for-Sale.html" href="javascript:;">
+               Plants
+                 </a> </div>
+		<div class="section-close"></div>
+      </div>
+      <div class="section-container" id="about-us-section">
+         <div class="section-separator">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+         </div>
+         <h2 class="section-header">About Us</h2>
+         <p>
+         <div style="font-weight: bold; font-variant: normal; text-decoration: underline;">TRICHY BODHI BONSAI NURSERY GARDEN
+         </div>
+         </p>
+         <p>
+         <ul>
+            <li>
+               Buy All Plants in Trichy Tamil Nadu Bodhi Bonsai Nursery Garden, Bonsai plants, Bonsai Tree, Cactus Plants, Orchid Plants, Ficus Plants, Jade Plants, Gift Plants, Fruit Trees, Flower Plants, Flowering Plants, Adenium plants, Succulent Plants,  Herbal Plants, Indoor Plants, Outdoor Plants, Bougainvillea plants, Lucky Bamboo, medicinal plants, Air Purifying plants and attractive ornamental plants for sale online at Best Price. Excellent to be grown in your homes or offices, Bonsai Plants are interpreted as the best plants for indoor gardeners.
+            </li>
+         </ul>
+         </p>
+         <p>
+         <div style="font-weight: bold; font-variant: normal; text-decoration: underline;">திருச்சி போதி போன்சாய் நர்சரி</div>
+         </p>
+         <p>
+         <ul>
+            <li>
+               உயர்தரமான அனைத்து வகையான அலங்கார மற்றும் குட்டை ஜாதி பழ வகை மர கன்றுகள்,போன்சாய் செடிகள் மற்றும் மூலிகை செடிகள் கிடைக்கும்.
+            </li>
+            <li>
+               பனானா திசுவளர்ப்பு (TISSUE CULTURE) செடி கிடைக்கும்
+            </li>
+            <li>
+               உயர்தரமான அனைத்து வகையான அலங்கார மற்றும் குட்டை ஜாதி பழ வகை மர கன்றுகள்,போன்சாய் செடிகள் மற்றும் மூலிகை செடிகள் கிடைக்கும்.
+            </li>
+         </ul>
+         </p>
+      </div>
+      <div class="section-container" id="video-section">
+         <div class="section-separator">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+         </div>
+         <h2 class="section-header">Videos</h2>
+         <div class="p-10"></div>
+         <div>
+            <div class="card" style="padding: 10px">
+               <div class="card" style="padding: 10px">
+                  <a href="https://www.youtube.com/embed/ZQRukNaHm_g" target="_BLANK"><img src="https://img.youtube.com/vi/ZQRukNaHm_g/0.jpg" style="width: 100%; height: 150px;" /></a>
+               </div>
+            </div>
+            <div class="card" style="padding: 10px">
+               <a href="https://www.youtube.com/embed/_F8DsIkneCo" target="_BLANK"><img src="https://img.youtube.com/vi/_F8DsIkneCo/0.jpg" style="width: 100%; height: 150px;" /></a>
+            </div>
+            <div class="card" style="padding: 10px">
+               <a href="https://www.youtube.com/embed/OxQe7DrmvTA" target="_BLANK"><img src="https://img.youtube.com/vi/OxQe7DrmvTA/0.jpg" style="width: 100%; height: 150px;" /></a>
+            </div>
+            <div class="card" style="padding: 10px">
+               <a href="https://www.youtube.com/embed/zuh9a_9jNgQ" target="_BLANK"><img src="https://img.youtube.com/vi/zuh9a_9jNgQ/0.jpg" style="width: 100%; height: 150px;" /></a>
+            </div>
+            <div class="card" style="padding: 10px">
+               <a href="https://www.youtube.com/embed/lzZcKMRexJY" target="_BLANK"><img src="https://img.youtube.com/vi/lzZcKMRexJY/0.jpg" style="width: 100%; height: 150px;" /></a>
+            </div>
+            <div class="card" style="padding: 10px">
+               <a href="https://www.youtube.com/embed/NUd-VpFgEBA" target="_BLANK"><img src="https://img.youtube.com/vi/NUd-VpFgEBA/0.jpg" style="width: 100%; height: 150px;" /></a>
+            </div>
+         </div>
+      </div>
+      <div class="copyright-wrapper">
+         © 2020 <a href="#"><b>AamDealGroup</b></a>
+      </div>
+      <!-- Footer Menu -->
+      <div class="footer">
+         <ul class="footer-menu">
+            <li>
+               <a class="footer-menu-link" href="#home-section">
+                  <i class="footer-menu-icon fas fa-home"></i>
+                  <div class="footer-menu-text">HOME</div>
+               </a>
+            </li>
+            <li>
+               <a class="footer-menu-link" href="#gallery-section">
+                  <i class="footer-menu-icon fas fa-file-image"></i>
+                  <div class="footer-menu-text">PRODUCTS</div>
+               </a>
+            </li>
+            <li>
+               <a class="footer-menu-link" href="#about-us-section">
+                  <i class="footer-menu-icon fas fa-briefcase"></i>
+                  <div class="footer-menu-text">ABOUT US</div>
+               </a>
+            </li>
+            <li>
+               <a class="footer-menu-link" href="#video-section">
+                  <i class="footer-menu-icon fas fa-video"></i>
+                  <div class="footer-menu-text">VIDEOS</div>
+               </a>
+            </li>
+         </ul>
+      </div>
+      <!-- The image Modal -->
+      <div id="imageModal" class="modal">
+         <span class="close" id="imageModalClose">×</span>
+         <img class="modal-content fadeIn" id="img01">
+         <div id="caption"></div>
+      </div>
+      <!-- The share Modal -->
+      <div id="shareModal" class="modal share-modal">
+         <div class="share-form fadeInUpBig">
+            <div class="share-form-header">
+               <h3 class="share-form-header-text">Share Profile</h3>
+               <span class="close" id="shareModalClose">×</span>
+            </div>
+            <div class="share-form-buttons-container">
+               <p>Share my Digital vCard in your network.</p>
+               <div class="share-buttons-heading">
+                  <img src="./templates/template3/tild-arrow.svg" class="share-buttons-arrow">
+                  <div class="share-buttons-heading-text">Share my Digital vCard</div>
+               </div>
+               <ul class="share-buttons">
+                  <li class="share-button">
+                     <a href="javascript:;" onclick="handleDirectWhatsappShare(this)">
+                     <i class="share-button-whatsapp fab fa-whatsapp"></i>
+                     </a>
+                  </li>
+                  <li class="share-button">
+                     <a target="_blank" href="sms:?body=https://mycard.aamdealgroup.com/Bodhi Bonsai Nursery and Aquarium">
+                     <i class="share-button-sms fas fa-comment-dots"></i>
+                     </a>
+                  </li>
+                  <li class="share-button">
+                     <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://mycard.aamdealgroup.com/Bodhi Bonsai Nursery and Aquarium&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">
+                     <i class="share-button-facebook fab fa-facebook-f"></i>
+                     </a>
+                  </li>
+                  <li class="share-button">
+                     <a target="_blank" href="https://twitter.com/intent/tweet?text=https://mycard.aamdealgroup.com/Bodhi Bonsai Nursery and Aquarium" data-size="large">
+                     <i class="share-button-twitter fab fa-twitter"></i>
+                     </a>
+                  </li>
+                  <li class="share-button">
+                     <i class="share-button-skype fab fa-skype"></i>
+                  </li>
+                  <li class="share-button">
+                     <i class="share-button-pinterest fab fa-pinterest-p"></i>
+                  </li>
+                  <li class="share-button">
+                     <i class="share-button-linkedin fab fa-linkedin-in"></i>
+                  </li>
+                  <li class="share-button">
+                     <i class="share-button-mail fas fa-envelope"></i>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <script src="./templates/common/js/star-rating.js"></script>
+      <script src="./templates/common/js/script.js"></script>
+      <script src="./styles/js/jquery.min.js" type="text/javascript"></script>
+      <script src="./styles/lib/fancy/v3/jquery.fancybox.min.js" type="text/javascript"></script> 
+      <script>
+         function showProducts(obj) {
+            var ObjName = obj.name;
+            if(ObjName == 'one') {
+               $("#tbleOne").show();
+               $("#tbleTwo").hide();
+               $("#tbleThree").hide();
+               $("#tbleFour").hide();
+               $("#tbleFive").hide();
+               $("#tbleSix").hide();
+               $("#tabOne").addClass("active");
+               $("#tabTwo").removeClass("active");
+               $("#tabThree").removeClass("active");
+               $("#tabFour").removeClass("active");
+               $("#tabFive").removeClass("active");
+               $("#tabSix").removeClass("active");
+            }
+            if(ObjName == 'two') {
+               $("#tbleOne").hide();
+               $("#tbleTwo").show();
+               $("#tbleThree").hide();
+               $("#tbleFour").hide();
+               $("#tbleFive").hide();
+               $("#tbleSix").hide();
+               $("#tbleSix").hide();
+               $("#tabOne").removeClass("active");
+               $("#tabTwo").addClass("active");
+               $("#tabThree").removeClass("active");
+               $("#tabFour").removeClass("active");
+               $("#tabFive").removeClass("active");
+               $("#tabSix").removeClass("active");
+            }
+            if(ObjName == 'three') {
+               $("#tbleOne").hide();
+               $("#tbleTwo").hide();
+               $("#tbleThree").show();
+               $("#tbleFour").hide();
+               $("#tbleFive").hide();
+               $("#tbleSix").hide();
+               $("#tabOne").removeClass("active");
+               $("#tabTwo").removeClass("active");
+               $("#tabThree").addClass("active");
+               $("#tabFour").removeClass("active");
+               $("#tabFive").removeClass("active");
+               $("#tabSix").removeClass("active");
+            }
+            if(ObjName == 'four') {
+               $("#tbleOne").hide();
+               $("#tbleTwo").hide();
+               $("#tbleThree").hide();
+               $("#tbleFour").show();
+               $("#tbleFive").hide();
+               $("#tbleSix").hide();
+               $("#tabOne").removeClass("active");
+               $("#tabTwo").removeClass("active");
+               $("#tabThree").removeClass("active");
+               $("#tabFour").addClass("active");
+               $("#tabFive").removeClass("active");
+               $("#tabSix").removeClass("active");
+            }
+            if(ObjName == 'five') {
+               $("#tbleOne").hide();
+               $("#tbleTwo").hide();
+               $("#tbleThree").hide();
+               $("#tbleFour").hide();
+               $("#tbleFive").show();
+               $("#tbleSix").hide();
+               $("#tabOne").removeClass("active");
+               $("#tabTwo").removeClass("active");
+               $("#tabThree").removeClass("active");
+               $("#tabFour").removeClass("active");
+               $("#tabFive").addClass("active");
+               $("#tabSix").removeClass("active");
+            }
+            if(ObjName == 'six') {
+               $("#tbleOne").hide();
+               $("#tbleTwo").hide();
+               $("#tbleThree").hide();
+               $("#tbleFour").hide();
+               $("#tbleFive").hide();
+               $("#tbleSix").show();
+               $("#tabOne").removeClass("active");
+               $("#tabTwo").removeClass("active");
+               $("#tabThree").removeClass("active");
+               $("#tabFour").removeClass("active");
+               $("#tabFive").removeClass("active");
+               $("#tabSix").addClass("active");
+            }
+         }
+      </script>  
+      <!-- Code injected by live-server -->
+      <script type="text/javascript">
+         // <![CDATA[  <-- For SVG support
+         if ('WebSocket' in window) {
+         	(function () {
+         		function refreshCSS() {
+         			var sheets = [].slice.call(document.getElementsByTagName("link"));
+         			var head = document.getElementsByTagName("head")[0];
+         			for (var i = 0; i < sheets.length; ++i) {
+         				var elem = sheets[i];
+         				var parent = elem.parentElement || head;
+         				parent.removeChild(elem);
+         				var rel = elem.rel;
+         				if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+         					var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+         					elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+         				}
+         				parent.appendChild(elem);
+         			}
+         		}
+         		var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+         		var address = protocol + window.location.host + window.location.pathname + '/ws';
+         		var socket = new WebSocket(address);
+         		socket.onmessage = function (msg) {
+         			if (msg.data == 'reload') window.location.reload();
+         			else if (msg.data == 'refreshcss') refreshCSS();
+         		};
+         		if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+         			console.log('Live reload enabled.');
+         			sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+         		}
+         	})();
+         }
+         else {
+         	console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+         }
+         // ]]>
+      </script>
+   </body>
+</html>
